@@ -1,0 +1,30 @@
+﻿header {
+    background:     red;
+    color:          white;
+}
+
+section {
+    background:     green;
+    color:          black;
+}
+
+aside {
+    background:     grey;
+    color:          white;
+}
+
+.container {
+    width:98%;
+    margin-left:1%;
+    margin-right:1%;
+    background: yellow;
+}
+
+footer {
+    background:     red;
+}
+
+.filtro {
+    margin-top:5px;
+    margin-bottom:5px;
+}
