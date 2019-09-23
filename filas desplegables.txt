@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/49858472/bootstrap-table-make-expandable-rows
