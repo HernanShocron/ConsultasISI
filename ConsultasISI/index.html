@@ -41,28 +41,81 @@
                 </select>
             </aside>
             <section class="col-xs-12 col-sm-8 col-md-10 col-lg-10 cuerpo">
-                
-                    <table class="table table1">
-                        <tr>
-                            <th>Profesor</th>
-                            <th>Día</th>
-                            <th>Horario</th>
-                            <th>Aula</th>
-                            <th>Contacto</th>
-                            <th>Cupos</th>
-                        </tr>
-                        <tr class="tr1">
-                            <td>Juan Pérez</td>
-                            <td>Jueves</td>                            
-                            <td>13:30 Hs.</td>
-                            <td>520</td>
-                            <td>email@dominio.com.ar</td>
-                            <td>3/8</td>
-                        </tr>
+                    <table class="table table-hover table1">
+                        <thead>
+                            <tr>
+                                <th>Profesor</th>
+                                <th>Día</th>
+                                <th>Horario</th>
+                                <th class="d-none d-md-table-cell">Aula</th>
+                                <th class="d-none d-md-table-cell">Contacto</th>
+                                <th>Cupos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-toggle="collapse" data-target="#acordeon1">
+                                <td>Juan Pérez</td>
+                                <td>Jueves</td>                            
+                                <td>13:30 Hs.</td>
+                                <td class="d-none d-md-table-cell">520</td>
+                                <td class="d-none d-md-table-cell">email@dominio.com.ar</td>
+                                <td>3/8</td>
+                            </tr>
+
+                            <!-- Opcion 1 -->
+
+                                <thead class="thead-dark">
+                                    <tr class="collapse" id="acordeon1">
+                                        <th class="d-table-cell d-sm-none d-none d-sm-table-cell d-md-none" colspan="2">Aula</th>
+                                        <th class="d-table-cell d-sm-none d-none d-sm-table-cell d-md-none" colspan="2">Contacto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="collapse" style="background-color: darkorange" id="acordeon1">
+                                        <td class="d-table-cell d-sm-none d-none d-sm-table-cell d-md-none" colspan="2">520</td>
+                                        <td class="d-table-cell d-sm-none d-none d-sm-table-cell d-md-none" colspan="2">email@dominio.com.ar</td>
+                                    </tr>
+                                    <tr class="collapse" style="background-color: darkorange" id="acordeon1">
+                                        <td class="d-table-cell d-sm-none d-none d-sm-table-cell d-md-none" colspan="4">
+                                            <img src="img/Koala.jpg" alt="Foto perfil" id="img1-sm-xs" class="img-thumbnail rounded mx-auto d-block" width="75%" height="auto">
+                                            <button class="btn btn-primary mx-auto d-block">INSCRIBIR</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            <!-- -->
+                                
+                            <tr data-toggle="collapse" data-target="#acordeon2">
+                                <td>Juan Pérez</td>
+                                <td>Jueves</td>                            
+                                <td>13:30 Hs.</td>
+                                <td class="d-none d-md-table-cell">520</td>
+                                <td class="d-none d-md-table-cell">email@dominio.com.ar</td>
+                                <td>3/8</td>
+                            </tr>
+
+                            <!-- Opcion 2 -->
+
+                            <tbody>
+                                <tr class="collapse" style="background-color: darkorange" id="acordeon2">
+                                    <td class="d-table-cell d-sm-none d-none d-sm-table-cell d-md-none" colspan="2">
+                                        <b>Aula: </b>520<br>
+                                        <b>Contacto: </b>email@dominio.com.ar 
+                                    </td>
+                                    <td class="d-table-cell d-sm-none d-none d-sm-table-cell d-md-none" colspan="2" >
+                                        <img src="img/Koala.jpg" alt="Foto perfil" id="img1-sm-xs" class="img-thumbnail img-fluid rounded mx-auto d-block" width="100%" height="auto">
+                                        <button class="btn btn-primary mx-auto d-block">INSCRIBIR</button> 
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <!-- -->
+
+                        </tbody>
                     </table>
                     <div id="contenedor1">
-                        <img src="img/Koala.jpg" alt="Foto perfil" width="100%" height="auto" id="img1" >
-                        <button class="btn btn-primary">INSCRIBIR</button>
+                        <img class="d-none d-md-table-cell" src="img/Koala.jpg" alt="Foto perfil" width="100%" height="auto" id="img1" >
+                        <button class="btn btn-primary d-none d-md-table-cell">INSCRIBIR</button>
                     </div>
                     
                 
