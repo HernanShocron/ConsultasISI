@@ -1,28 +1,23 @@
-﻿.cabecera {
-    background:     silver;
-    color:          black;
+﻿/* General styles */
+
+.principal {
+    background: yellow;
 }
 
-.cuerpo {
-    background:     white;
+.row {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.cabecera {
+    background:     silver;
     color:          black;
+    text-align: center;
 }
 
 .selectores {
     background:     silver;
     color:          white;
-}
-
-.principal {
-    width:94%;
-    background: yellow;
-    margin-left: 3%;
-    margin-right: 3%;
-}
-
-.pie {
-    background:     silver;
-    color: black;
     text-align: center;
 }
 
@@ -31,13 +26,33 @@
     margin-bottom:5px;
 }
 
-.table1{
-    background-color: silver;
-    margin-right: 1%;
-    margin-top: 1%;
-    float: left;
-    width: 79%;
+.cuerpo {
+    background:     white;
+    color:          black;
+    padding-left: 1%;
+    padding-right: 1%;
 }
+
+.tabla {
+    background-color: silver;
+    margin-top: 2%;
+}
+
+.visible {
+    display: none;
+}
+
+.info {
+    background-color: darkorange;
+    display: table-row;
+}
+
+#info {
+    max-width: 60%; 
+    float: left; 
+    padding-right: 0px;
+}
+
 #contenedor1 {
     float: right; 
     background: transparent; 
@@ -45,11 +60,64 @@
     margin-top: 1%;
     text-align: center; 
     margin-bottom: 1%;
+    display: none;
 }
+
 #img1{
     margin-bottom: 5%;
 }
 
-.tr1 :hover {
-    background-color: white;
+.pie {
+    background:     silver;
+    color: black;
+    text-align: center;
+}
+
+
+/* Responsive styles */
+
+@media only screen and (min-width: 576px) {
+    .selectores {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .principal {
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .row {
+        margin: initial;
+    }
+    .cabecera {
+        padding: initial;
+    }
+    .cuerpo {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .tabla{
+        width: 79%;
+        margin-right: 1%;
+        margin-top: 1%;
+        margin-left: initial;
+        float: left;
+    }
+    .mostrar {
+        display: none!important;
+    }
+    #contenedor1 {
+        display: block;
+    }
+}
+
+@media (min-width: 940px) {
+    .visible {
+        display: table-cell;
+    }
+    .info {
+        display: none;
+    }
 }
