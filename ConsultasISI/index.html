@@ -12,9 +12,26 @@
     <div class="principal">
         <div class="row">
             <header class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cabecera">
-                <h1>
-                    Consultas de materias de ISI
-                </h1>
+                <h1>Consultas de materias de ISI</h1>    
+                <img class="img-thumbnail img-fluid rounded-circle float-left" src="img/Foto.jpg" alt="Foto usuario" width="15%" height="auto" id="foto">
+                <h2 style="margin-top: 3%; margin-left: 5%">Nombre de usuario</h2>
+                <nav class="navbar navbar-expand-md navbar-expand-sm navbar-toggleable-md bg-dark navbar-dark">
+                    <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Mis consultas</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Realizar consulta</a>
+                            </li>    
+                        </ul>
+                        <div class="dropdown-divider ocultar"></div>
+                        <a class="btn btn-danger" href="#" role="button">Cerrar sesión</a>
+                    </div>  
+                </nav>
             </header>
         </div>
         <div class="row">
@@ -65,9 +82,9 @@
                                 <div id="info">
                                     <b>Aula: </b>520<br>
                                     <b>Contacto: </b>email@dominio.com.ar 
-                                    <button class="btn btn-primary mx-auto d-block mostrar">INSCRIBIR</button>
+                                    <button class="btn btn-primary mx-auto d-block ocultar">INSCRIBIR</button>
                                 </div>
-                                <img class="img-thumbnail rounded float-right mostrar" src="img/Koala.jpg" alt="Foto perfil" width="40%" height="auto">                                     
+                                <img class="img-thumbnail rounded float-right ocultar" src="img/Koala.jpg" alt="Foto perfil" width="40%" height="auto">                                     
                             </td>
                         </tr>    
                         <tr data-toggle="collapse" data-target="#acordeon2">
@@ -83,9 +100,9 @@
                                 <div id="info">
                                     <b>Aula: </b>520<br>
                                     <b>Contacto: </b>email@dominio.com.ar 
-                                    <button class="btn btn-primary mx-auto d-block mostrar">INSCRIBIR</button>
+                                    <button class="btn btn-primary mx-auto d-block ocultar">INSCRIBIR</button>
                                 </div>
-                                <img class="img-thumbnail rounded float-right mostrar" src="img/Koala.jpg" alt="Foto perfil" width="40%" height="auto">                                     
+                                <img class="img-thumbnail rounded float-right ocultar" src="img/Koala.jpg" alt="Foto perfil" width="40%" height="auto">                                     
                             </td>
                         </tr>    
                     </tbody>
@@ -105,6 +122,8 @@
         </div>
     </div>
     <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
 </body>
 </html>

@@ -12,7 +12,17 @@
 .cabecera {
     background:     silver;
     color:          black;
+}
+.cabecera h1 {
     text-align: center;
+}
+.cabecera h2 {
+    margin-top: 7%;
+}
+
+#foto {
+    margin-left: 0%;
+    margin-right: 2%;
 }
 
 .selectores {
@@ -24,6 +34,10 @@
 .filtro {
     margin-top:5px;
     margin-bottom:5px;
+}
+
+.menu {
+    display: initial;
 }
 
 .cuerpo {
@@ -94,6 +108,14 @@
     .cabecera {
         padding: initial;
     }
+    .cabecera h2 {
+        margin-left: 5%;
+    }
+    #foto {
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 8%;
+    }
     .cuerpo {
         padding-left: 15px;
         padding-right: 15px;
@@ -105,7 +127,7 @@
         margin-left: initial;
         float: left;
     }
-    .mostrar {
+    .ocultar {
         display: none!important;
     }
     #contenedor1 {
