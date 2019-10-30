@@ -1,0 +1,80 @@
+/* General styles */
+
+.filtro {
+    margin-top:        5px;
+    margin-bottom:     5px;
+}
+.visible {
+    display:           none;
+}
+.info {
+    background-color:  darkorange;
+    display:           table-row;
+}
+#info {
+    max-width:         60%;
+    float:             left;
+    padding-right:     0px;
+}
+#contenedor1 {
+    float:             right; 
+    background:        transparent; 
+    width:             20%; 
+    margin-top:        1%;
+    text-align:        center; 
+    margin-bottom:     1%;
+    display:           none;
+}
+#img1{
+    margin-bottom:     5%;
+}
+
+/* Responsive styles */
+
+@media only screen and (min-width: 419px) {
+    img.ocultar {
+        width:         38%;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    #info {
+        max-width:     40%;
+    }
+    img.ocultar {
+        width:         36%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    img.ocultar {
+        width:         34%;
+    }
+}
+
+@media only screen and (min-width: 623px) {
+    img.ocultar {
+        display:       block;
+        margin-left:   auto;
+        margin-right:  auto;
+        width:         27%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ocultar {
+        display:       none!important;
+    }
+    #contenedor1 {
+        display:       block;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .visible {
+        display:       table-cell;
+    }
+    .info {
+        display:       none;
+    }
+}

@@ -1,0 +1,94 @@
+/* General styles */
+
+.principal {
+    background:        yellow;
+}
+.fila {
+    margin-left:       0%;
+    margin-right:      0%;
+}
+.cabecera {
+    background:        silver;
+    color:             black;
+    text-align:        center;
+    padding:           initial;
+}
+.usuario {
+    color:             white;
+}
+.selectores {
+    background:        silver;
+    color:             white;
+    text-align:        center;
+}
+.cuerpo {
+    background:        white;
+    color:             black;
+    padding-left:      1%;
+    padding-right:     1%;
+}
+.tabla {
+    background-color:  silver;
+    margin-top:        2%;
+}
+.pie {
+    background:        silver;
+    color:             black;
+    text-align:        center;
+}
+
+/* Responsive styles */
+
+@media only screen and (min-width: 419px) {
+    img.ocultar {
+        width:         38%;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    img.ocultar {
+        width:         36%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .principal {
+        width:         94%;
+        margin-left:   3%;
+        margin-right:  3%;
+    }
+    .selectores {
+        text-align:    left;
+    }
+    #filtros {
+        display:       block;
+    }
+    .btnFiltro {
+        display:       none;
+    }
+    img.ocultar {
+        width:         34%;
+    }
+}
+
+@media only screen and (min-width: 623px) {
+    img.ocultar {
+        display:       block;
+        margin-left:   auto;
+        margin-right:  auto;
+        width:         27%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tabla{
+        width:         79%;
+        margin-right:  1%;
+        margin-top:    1%;
+        margin-left:   initial;
+        float:         left;
+    }
+    .ocultar {
+        display:       none!important;
+    }
+}
