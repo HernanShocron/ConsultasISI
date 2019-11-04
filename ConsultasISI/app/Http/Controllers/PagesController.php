@@ -9,17 +9,21 @@ class PagesController extends Controller
     public function inicio() {
         return view('welcome');
     }
-
+/*
+    public function alumnoIndex() {
+        return view('Alumno.home');
+    }
+*/
     public function inscribir() {
-        return view('alumnos1');
+        return view('Alumno.alumnos1');
     }
 
     public function misConsultas() {
-        return view('alumnos2');
+        return view('Alumno.alumnos2');
     }
 
     public function docentes1() {
-        return view('docentes');
+        return view('Docente.docentes1');
     }
 
     public function docentes2() {
@@ -27,15 +31,15 @@ class PagesController extends Controller
     }
 
     public function admin1() {
-        return view('admin');
+        return view('Administrador.admin1');
     }
 
-    public function admin2() {
-        return view('alumnos1');
+    public function adminABMC() {
+        return view('Administrador.abmc');
     }
 
-    public function admin3() {
-        return view('alumnos1');
+    public function adminListado() {
+        return view('Administrador.listado');
     }
 
     public function admin4() {

@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use User;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,7 +28,27 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    //protected $redirectTo = '/inscripcion';
+    protected function authenticated(Request $request) {
+        $user= Auth::user();
+        if(!$user->roles->first()){
+            abort(403, 'Soy un aborto xD');
+        } else {
+        switch($user->roles->first()->name)
+        {
+            case 'Alumno':
+                return redirect(route('alumnoConsultas'));
+                break;
+            case 'Docente':
+                return redirect(route('docenteHome'));
+                break;
+            case 'Administrador':
+                return redirect(route('adminHome'));
+                break;
+            default:
+                abort(403, 'This action is not authorized');
+        }}
+    }
 
     /**
      * Create a new controller instance.

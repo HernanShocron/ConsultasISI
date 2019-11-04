@@ -1,21 +1,85 @@
 @extends('principal')
 
-@section('title', 'Consultas - Alumnos')
-
-@section('estilos')
-<link href="{{asset('css/alumnos2.css')}}" rel="stylesheet">  
-@endsection
+@section('title', 'Consultas - Admin')
 
 @section('navegacion')
-<li class="nav-item">
-  <a class="nav-link" href="{{ route('alumno') }}">Realizar consulta</a>
-</li>
+
 <li class="nav-item active">
-  <a class="nav-link" href="{{ route('alumno-consultas') }}">Mis consultas</a>
-</li>   
+  <a class="nav-link" href="{{ route('adminHome') }}">Ver consultas</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="{{ route('adminABMC') }}">Realizar ABMC</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="#">Listado</a>
+</li>      
+<li class="nav-item">
+  <a class="nav-link" href="#">Bloquear consulta</a>
+</li>
+
+
+
+
+<!--
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ir a...
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Ver consultas</a>
+        <a class="dropdown-item" href="#">Realizar ABMC</a>
+        <a class="dropdown-item" href="#">Listado</a>
+        <a class="dropdown-item" href="#">Bloquear consulta</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    -->
+
+
+
+
+
+
+
+
+
+
+
 @endsection
 
 @section('lateral')
+    a
+@endsection
+
+@section('cuerpo')
+<h2>Selecciona</h2>
+<form>
+  <div class="form-group">
+    <select class="filtro custom-select-sm" name="Año">
+      <option selected>Año de Materia</option>
+      <option>1º</option>
+      <option>2º</option>
+      <option>3º</option>
+      <option>4º</option>
+      <option>5º</option>
+    </select>
+    <select class="filtro custom-select-sm" name="Materia">
+      <option selected>Nombre de Materia</option>
+    </select>
+    <select class="filtro custom-select-sm" name="Día">
+      <option selected>Día de Consulta</option>
+      <option>Lunes</option>
+      <option>Martes</option>
+      <option>Miercoles</option>
+      <option>Jueves</option>
+      <option>Viernes</option>
+    </select>  
+  </div>
+</form>
+
+
+
 <div class="dropdown-divider"></div>
 <h2>
   <i class="fas fa-filter"></i> Filtrar
@@ -25,37 +89,23 @@
 </h2>
 <div class="dropdown-divider"></div>
 <div class="collapse" id="filtros">
-  <div>
-    <div class="custom-control custom-control-inline custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheck1">
-      <label class="custom-control-label" for="customCheck1">Estado: Confirmado</label>
-    </div>
-    <div class="custom-control custom-control-inline custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheck2">
-      <label class="custom-control-label" for="customCheck2">Estado: Pendiente</label>
-    </div>
-  </div>
-  <div>
-    <div class="custom-control custom-control-inline custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheck3">
-      <label class="custom-control-label" for="customCheck3">Fecha: Vigente</label>
-    </div>
-    <div class="custom-control custom-control-inline custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheck4">
-      <label class="custom-control-label" for="customCheck4">Fecha: Vencido</label>
-    </div>
-  </div>      
+  
 </div>
-@endsection
 
-@section('cuerpo')
+
+
+
 <div class="table-responsive">
-  <table class="table table-hover tabla" style="width:100%">
-    <thead>
+  <table class="table table-hover table-light tabla" style="width:100%">
+    <thead class="thead-dark">
       <tr>
-        <th style="width:33%">Consulta</th>
-        <th style="width:33%">Estado</th>
-        <th style="width:34%">Foto</th>
+        <th>Alumno</th>
+        <th>Materia</th>
+        <th>Profesor</th>
+        <th>Día</th>
+        <th>Horario</th>
+        <th class="visible">Aula</th>
+        <th class="visible">Contacto</th>
       </tr>
     </thead>
     <tbody>

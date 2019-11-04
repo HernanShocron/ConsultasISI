@@ -13,7 +13,8 @@
     <div class="principal">
       <div class="row fila">
         <header class="col-12 col-sm-12 col-md-12 col-lg-12 cabecera">
-          <h1>Consultas de materias de ISI</h1>    
+          <h1>UTN Facultad Regional Rosario</h1>
+          <h2>Sistema de Consultas - ISI</h2>
           <nav class="navbar navbar-expand-md navbar-expand-sm navbar-toggleable-sm navbar-toggleable-md bg-dark navbar-dark">
             <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#enlaces" aria-controls="enlaces" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -25,8 +26,13 @@
               </ul>
               <div class="dropdown-divider ocultar"></div>
               <div>                        
-                <div class="usuario"><i class="far fa-envelope"></i> usuario@correo.com</div>
-                <a class="btn btn-danger" href="{{ route('inicio') }}"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                <div class="usuario"><i class="far fa-envelope"></i> <!--{{ auth()->user()->email }}--></div>
+                <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                  <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
+                <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  {{ csrf_field() }}
+                </form>
               </div>
             </div>  
           </nav>

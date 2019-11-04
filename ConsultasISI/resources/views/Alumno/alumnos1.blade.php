@@ -7,11 +7,11 @@
 @endsection
 
 @section('navegacion')
-<li class="nav-item active">
-  <a class="nav-link" href="{{ route('alumno') }}">Realizar consulta</a>
-</li>
 <li class="nav-item">
-  <a class="nav-link" href="{{ route('alumno-consultas') }}">Mis consultas</a>
+  <a class="nav-link" href="{{ route('alumnoConsultas') }}">Mis consultas</a>
+</li>
+<li class="nav-item active">
+  <a class="nav-link" href="{{ route('alumnoInscribir') }}">Realizar consulta</a>
 </li>   
 @endsection
 
