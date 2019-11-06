@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minumun-scale=1.0" />
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/principal.css')}}" rel="stylesheet">
+    <!-- Calendar -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+   
     @yield('estilos')    
     <script src="{{asset('js/all.min.js')}}"></script>
     <title>@yield('title')</title>
@@ -26,7 +29,7 @@
               </ul>
               <div class="dropdown-divider ocultar"></div>
               <div>                        
-                <div class="usuario"><i class="far fa-envelope"></i> <!--{{ auth()->user()->email }}--></div>
+              <div class="usuario"><i class="far fa-envelope"></i> <!--{ auth()->user()->email }--></div>
                 <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                   <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
                 </a>
@@ -54,8 +57,20 @@
         </footer>
       </div>
     </div>
+    
+    
+
+
+
     <script src="{{asset('js/jquery.js')}}"></script>
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+
+
+    <!-- Calendar-->
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
   </body>
 </html>
+
+
